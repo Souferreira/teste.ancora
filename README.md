@@ -244,12 +244,48 @@ button:hover {
         const chartCanvas = document.getElementById('career-anchors-chart');
         let answers = {};
     
-
-const questions = [
-    { question: "1. Sonho em ser tão bom no que faço que minha opinião de especialista seja sempre solicitada.", category: "COMPETÊNCIA TÉCNICA" },
-    { question: "2. Me sinto mais realizado em meu trabalho quando sou capaz de integrar e gerenciar o trabalho dos outros.", category: "COMPETÊNCIA ADMINISTRATIVA" },
-    
-        ];
+ const questions = [
+    { question: "1. Sonho em ser tão bom no que faço que minha opinião de especialista seja sempre solicitada.", category: "COMPETÊNCIA TÉCNICA/FUNCIONAL" },
+    { question: "2. Me sinto mais realizado em meu trabalho quando sou capaz de integrar e gerenciar o trabalho dos outros.", category: "COMPETÊNCIA ADMINISTRATIVA/GERAL" },
+    { question: "3. Sonho em ter uma carreira que me dê a liberdade de fazer o trabalho do meu jeito e no tempo por mim programado.", category: "AUTONOMIA E INDEPENDÊNCIA" },
+    { question: "4. Segurança e estabilidade são mais importantes para mim do que liberdade e autonomia.", category: "SEGURANÇA E ESTABILIDADE" },
+    { question: "5. Estou sempre procurando ideias que me permitam iniciar meu próprio negócio.", category: "CRIATIVIDADE EMPREENDEDORA" },
+    { question: "6. Sentirei sucesso na minha carreira se sentir que contribuí verdadeiramente para o bem-estar da sociedade.", category: "DEDICAÇÃO A UMA CAUSA" },
+    { question: "7. Sonho com uma carreira na qual eu possa solucionar problemas ou vencer em situações extremamente desafiadoras.", category: "DESAFIO PURO" },
+    { question: "8. Prefiro deixar meu emprego a ser colocado em um trabalho que comprometa minha capacidade de satisfazer meus interesses pessoais e familiares.", category: "ESTILO DE VIDA" },
+    { question: "9. Só me sentirei bem-sucedido em minha carreira se puder desenvolver minhas habilidades técnicas e funcionais até o mais alto nível de competência.", category: "COMPETÊNCIA TÉCNICA/FUNCIONAL" },
+    { question: "10. Sonho em dirigir uma organização complexa e tomar decisões que afetem muitas pessoas.", category: "COMPETÊNCIA ADMINISTRATIVA/GERAL" },
+    { question: "11. Me sinto mais realizado em meu trabalho quando tenho total liberdade de definir minhas próprias tarefas, horários e procedimentos.", category: "AUTONOMIA E INDEPENDÊNCIA" },
+    { question: "12. Prefiro manter minha atividade atual a aceitar outra tarefa que possa colocar em risco minha segurança na empresa.", category: "SEGURANÇA E ESTABILIDADE" },
+    { question: "13. Montar meu próprio negócio é mais importante para mim do que atingir uma alta posição gerencial como funcionário.", category: "CRIATIVIDADE EMPREENDEDORA" },
+    { question: "14. Me sinto mais realizado em minha carreira quando posso utilizar meus talentos a serviço dos outros.", category: "DEDICAÇÃO A UMA CAUSA" },
+    { question: "15. Me sinto realizado em minha carreira apenas quando enfrento e supero desafios extremamente difíceis.", category: "DESAFIO PURO" },
+    { question: "16. Sonho com uma carreira que me permita integrar minhas necessidades pessoais, familiares e de trabalho.", category: "ESTILO DE VIDA" },
+    { question: "17. Me tornar um gerente técnico em minha área de especialização é mais atraente para mim do que me tornar um gerente geral em alguma organização.", category: "COMPETÊNCIA TÉCNICA/FUNCIONAL" },
+    { question: "18. Me sentirei bem-sucedido em minha carreira apenas quando me tornar um gerente geral em alguma organização.", category: "COMPETÊNCIA ADMINISTRATIVA/GERAL" },
+    { question: "19. Me sentirei bem-sucedido em minha carreira apenas quando alcançar total autonomia e liberdade.", category: "AUTONOMIA E INDEPENDÊNCIA" },
+    { question: "20. Procuro trabalhos em organizações que me deem senso de segurança e estabilidade.", category: "SEGURANÇA E ESTABILIDADE" },
+    { question: "21. Me sinto realizado em minha carreira quando sou capaz de construir alguma coisa que seja inteiramente resultado de minhas ideias e esforços.", category: "CRIATIVIDADE EMPREENDEDORA" },
+    { question: "22. Utilizar minhas habilidades para tornar o mundo um lugar melhor para se viver e trabalhar é mais importante para mim do que alcançar uma posição gerencial de alto nível.", category: "DEDICAÇÃO A UMA CAUSA" },
+    { question: "23. Me sinto mais realizado em minha carreira quando soluciono problemas aparentemente insolúveis ou venço o que aparentemente era impossível de ser vencido.", category: "DESAFIO PURO" },
+    { question: "24. Me sinto bem-sucedido na vida apenas quando sou capaz de equilibrar minhas necessidades pessoais, familiares e de carreira.", category: "ESTILO DE VIDA" },
+    { question: "25. Prefiro sair da empresa onde estou a aceitar uma tarefa em esquema rotativo que me afaste da minha área de experiência.", category: "COMPETÊNCIA TÉCNICA/FUNCIONAL" },
+    { question: "26. Me tornar um diretor geral é mais atraente para mim do que me tornar um diretor técnico em minha área de especialização.", category: "COMPETÊNCIA ADMINISTRATIVA/GERAL" },
+    { question: "27. Para mim, poder fazer um trabalho do meu jeito, livre de regras e restrições, é mais importante do que segurança.", category: "AUTONOMIA E INDEPENDÊNCIA" },
+    { question: "28. Me sinto mais realizado em meu trabalho quando percebo que tenho total segurança financeira e estabilidade no trabalho.", category: "SEGURANÇA E ESTABILIDADE" },
+    { question: "29. Me sinto bem-sucedido em meu trabalho apenas quando posso criar ou construir alguma coisa que seja inteiramente de minha autoria.", category: "CRIATIVIDADE EMPREENDEDORA" },
+    { question: "30. Sonho em ter uma carreira que faça uma real contribuição à humanidade e à sociedade.", category: "DEDICAÇÃO A UMA CAUSA" },
+    { question: "31. Procuro oportunidades de trabalho que desafiem fortemente minhas habilidades para solucionar problemas.", category: "DESAFIO PURO" },
+    { question: "32. Equilibrar as exigências da minha vida pessoal e profissional é mais importante do que alcançar alta posição gerencial.", category: "ESTILO DE VIDA" },
+    { question: "33. Me sinto plenamente realizado em meu trabalho quando sou capaz de empregar minhas habilidades e talentos especiais.", category: "COMPETÊNCIA TÉCNICA/FUNCIONAL" },
+    { question: "34. Prefiro sair da empresa onde estou a aceitar um cargo que me afaste do caminho da diretoria geral.", category: "COMPETÊNCIA ADMINISTRATIVA/GERAL" },
+    { question: "35. Prefiro sair da empresa onde estou a aceitar um cargo que reduza minha autonomia e liberdade.", category: "AUTONOMIA E INDEPENDÊNCIA" },
+    { question: "36. Sonho em ter uma carreira que me dê senso de segurança e estabilidade.", category: "SEGURANÇA E ESTABILIDADE" },
+    { question: "37. Sonho em iniciar e montar meu próprio negócio.", category: "CRIATIVIDADE EMPREENDEDORA" },
+    { question: "38. Prefiro sair da empresa onde estou a aceitar um cargo que prejudique minha capacidade de ser útil aos outros.", category: "DEDICAÇÃO A UMA CAUSA" },
+    { question: "39. Trabalhar em problemas praticamente insolúveis para mim é mais importante do que alcançar uma posição gerencial de alto nível.", category: "DESAFIO PURO" },
+    { question: "40. Sempre procurei oportunidades de trabalho que minimizassem interferências com assuntos pessoais e familiares.", category: "ESTILO DE VIDA" }
+];
 
    
         // Gerar as questões
