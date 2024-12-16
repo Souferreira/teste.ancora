@@ -34,10 +34,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build site (se necessário)
-        run: |
-          # Comandos para compilar o site (substitua conforme necessário)
-          mkdir -p public
-          cp -R * public/
+  run: |
+    mkdir -p public
+    # Comando de build aqui, por exemplo, npm run build ou outro processo
+    cp -R * ./public/  # Copia os arquivos para o diretório public sem incluir public dentro de si mesmo
+
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
