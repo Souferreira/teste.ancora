@@ -27,14 +27,34 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Install Ruby
+
+      - name: Build site (se necessário)
         run: |
+          # Comandos para compilar o site (substitua conforme necessário)
+          mkdir -p public
+          cp -R * public/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages  # Este é o nome que o deploy vai procurar
+          path: ./public      # Este é o diretório que contém os arquivos do seu site
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_name: github-pages  # Nome do artefato
+          timeout: 600000
+          error_count: 10
+          reporting_interval: 5000
+          preview: false
+
   # Deployment job
   deploy:
     environment:
