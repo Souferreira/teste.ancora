@@ -1,6 +1,5 @@
 O arquivo README.md está atualmente vazio. Aqui está um exemplo de um README.md desenvolvido para seu repositório:
 
-```markdown
 # Teste Ancora
 
 Este é o repositório do projeto Teste Ancora.
