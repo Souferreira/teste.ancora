@@ -1,4 +1,3 @@
-O arquivo README.md está atualmente vazio. Aqui está um exemplo de um README.md desenvolvido para seu repositório:
 
 # Teste Ancora
 
