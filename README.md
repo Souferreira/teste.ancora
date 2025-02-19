@@ -10,8 +10,6 @@ O projeto Teste Ancora é um exemplo de aplicação HTML.
 ## Estrutura do Projeto
 
 - **index.html**: Página principal do projeto.
-- **styles.css**: Estilos para a página HTML.
-- **scripts.js**: Scripts JavaScript para adicionar funcionalidade à página.
 
 ## Como Executar
 
